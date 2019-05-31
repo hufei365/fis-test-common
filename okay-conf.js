@@ -13,19 +13,19 @@ fis.match('/src/{require.js, resource-map.js}', {
     parser: null
 });
 
-fis.match('/src/(**.{html, js, png, scss, css, jpg})', {
-    release :'$1',
-    deploy: fis.plugin('local-deliver', {
-        to: path.resolve(__dirname, './output')
-    })
-});
+// fis.match('/src/(**.{html, js, png, scss, css, jpg})', {
+//     release :'$1',
+//     // deploy: fis.plugin('local-deliver', {
+//     //     to: path.resolve(__dirname, './output')
+//     // })
+// });
 
-fis.match('/node_modules/(*)/**.js', {
-    release :'$0',
-    deploy: fis.plugin('local-deliver', {
-        to: path.resolve(__dirname, './output')
-    })
-});
+// fis.match('/node_modules/(*)/**.js', {
+//     release :'$0',
+//     // deploy: fis.plugin('local-deliver', {
+//     //     to: path.resolve(__dirname, './output')
+//     // })
+// });
 
 
 fis.media('112').match('/src/(**.{html, js, png, scss, css, jpg})', {
